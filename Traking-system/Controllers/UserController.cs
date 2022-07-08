@@ -6,6 +6,7 @@ namespace Traking_system.Controllers
     [Route("api/user")]
     public abstract class User : ControllerBase
     {
+        
 
     }
 }

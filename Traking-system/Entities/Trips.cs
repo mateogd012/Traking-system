@@ -7,20 +7,23 @@ namespace Traking_system.Entites
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdTrip { get; set; }
+        public int Id { get; set; }
         [Required]
         [MaxLength(50)]
-        public string Source { get; set; } = string.Empty;
+        public string Source { get; set; }
 
         [MaxLength(50)]
-        public string Destination { get; set; } = string.Empty;
+        public string Destination { get; set; }
+        [MaxLength(50)]
+        public string TripOwner { get; set; }
 
-
-        public Trips(string source, string destination)
+        public Trips(string source, string destination, string tripowner)
         {
-            Source = source.Trim();
-            Destination = destination.Trim();
-        }
+            Source = source;
+            Destination = destination;
+            TripOwner = tripowner;
+        }  
+        
 
     }
 }
